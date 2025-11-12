@@ -79,6 +79,28 @@ body {
 header, nav, article, footer {
     padding: 1rem;
 }
+
+.skip-link {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-0%, -200px);
+    background-color: var(--ocean-blue);
+    color: var(--soft-white);
+    z-index: 100;
+    text-decoration: none;
+    padding: 1rem 2rem;
+}
+
+.skip-link:focus {
+    transform: translate(-50%, 0px);
+}
+
+.skip-link:visited {
+    background-color: var(--ocean-blue);
+    color: var(--sandy-beige);
+}
+
 picture, #plan-your-trip, #about-your-destination  {
     margin-top:1rem;
 }
@@ -383,9 +405,9 @@ header h1+p {
     font-weight: bold;
     font-style: italic;
 }
-#legal h2 {
+/* #legal h2 {
     visibility: hidden;
-}
+} */
 #legal {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -440,7 +462,8 @@ small {
     }
     picture {
         display:block;
-        place-content:unset;
+        place-content:center;
+        text-align: center;
     }
     article small {
         text-align: right;
@@ -456,6 +479,9 @@ small {
         font-size: 1.4em;
         line-height: 1.7em;
         font-style: italic;
+    }
+    #intro small {
+        text-align: center;
     }
     #plan-your-trip {
         grid-template-columns: 1fr 1fr 1fr 1fr;
